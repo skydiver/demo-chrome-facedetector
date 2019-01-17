@@ -42,7 +42,7 @@
           var canvasContext = webcamCanvas.getContext('2d');
 
           // Attach webcam stream to video element
-          webcamVideo.src = URL.createObjectURL(stream);
+          webcamVideo.srcObject = stream;
           webcamVideo.play();
 
           // Create FaceDetector API
