@@ -22,52 +22,18 @@ if (window.FaceDetector !== undefined) {
       // Create FaceDetector API
       let faceDetector = new window.FaceDetector();
 
-
-
       setInterval(async () => {
 
         const result = await faceDetector.detect(webcamVideo);
         const coords = result[0].boundingBox;
         const square = document.querySelector('#square');
 
-
-        // const newWidth = coords.width * 1.3;
-        // const newLeft = coords.left - (newWidth - coords.width)
-
-
-
-        // const newHeight = coords.height * 1.3;
-        // const newTop = coords.top - (newHeight - coords.height)
-
-square.style.width = `${coords.width}px`;
-square.style.height = `${coords.height}px`;
-square.style.top = `${coords.top}px`;
-square.style.left = `${coords.left}px`;
-
-        // square.style.width = `${newWidth}px`;
-        // square.style.height = `${ newHeight}px`;
-
-
-        // square.style.top = `${ newTop}px`;
-        // square.style.left = `${newLeft}px`;
-        // square.style.right = `${coords.right}px`;
-        // square.style.bottom = `${ coords.bottom}px`;
-
+        square.style.width = `${coords.width}px`;
+        square.style.height = `${coords.height}px`;
+        square.style.top = `${coords.top}px`;
+        square.style.left = `${coords.left}px`;
 
       }, 300);
-
-
-
-      // bottom: 309.35906982421875
-      // height: 129.9478759765625
-      // left: 170.14967346191406
-      // right: 300.09754943847656
-      // top: 179.41119384765625
-      // width: 129.9478759765625
-      // x: 170.14967346191406
-      // y: 179.41119384765625
-
-
 
       // Detect face every 500 ms
       setInterval(function() {
