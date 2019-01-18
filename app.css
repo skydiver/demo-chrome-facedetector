@@ -19,8 +19,8 @@ body {
 #wrapper {
     display: flex;
     position: relative;
-    width: 80%;
-    height: auto;
+    /* width: 80%;
+    height: auto; */
     margin: auto;
     border: solid 4px indianred;
     justify-content: center;
@@ -37,12 +37,15 @@ body {
 }
 
 #webcam {
-    width: 0;
-    height: 0;
+    /* width: 0;
+    height: 0; */
+
 }
 
 #webcam-canvas {
+    display: none;
     width: 100%;
+    transform: scaleX(-1);
 }
 
 .monkey {
@@ -51,4 +54,18 @@ body {
 
 .monkey.visible {
     display: inline;
+}
+
+
+#square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    /* border: solid 3px yellow; */
+    z-index: 500;
+    background: url('https://cdn160.picsart.com/upscale-272899131007211.png?r1024x1024');
+    background-repeat: no-repeat;
+    background-size: cover;
+      /* transition: all 0.5s ease; */
+
 }
